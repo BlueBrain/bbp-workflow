@@ -1,0 +1,38 @@
+{
+  "@context": [
+    "https://bluebrain.github.io/nexus/contexts/metadata.json",
+    "https://bbp.neuroshapes.org"
+  ],
+  "@id": "https://variant-workflow-id",
+  "@type": "Variant",
+  "distribution": {
+    "@type": "DataDownload",
+    "contentSize": {
+      "unitCode": "bytes",
+      "value": 928
+    },
+    "contentUrl": "https://variant-workflow-distribution-url",
+    "digest": {
+      "algorithm": "SHA-256",
+      "value": "ab7c288f30487c111b9435f1affefa4bcca5beb795f691b60eb9bc6c0f8e19d2"
+    },
+    "encodingFormat": "application/cwl",
+    "name": "definition.cwl"
+  },
+  "generator_name": "foo",
+  "name": "foo|bar|v1",
+  "variant_name": "bar",
+  "version": "v1",
+  "_constrainedBy": "https://bluebrain.github.io/nexus/schemas/unconstrained.json",
+  "_createdAt": "2024-02-19T14:45:13.685305Z",
+  "_createdBy": "https://bbp.epfl.ch/nexus/v1/realms/bbp/users/zisis",
+  "_deprecated": false,
+  "_incoming": "https://bbp.epfl.ch/nexus/v1/resources/bbp/mmb-point-neuron-framework-model/_/https:%2F%2Fbbp.epfl.ch%2Fdata%2Fbbp%2Fmmb-point-neuron-framework-model%2Ff51304b9-aead-4dc4-af75-577906b7aea3/incoming",
+  "_outgoing": "https://bbp.epfl.ch/nexus/v1/resources/bbp/mmb-point-neuron-framework-model/_/https:%2F%2Fbbp.epfl.ch%2Fdata%2Fbbp%2Fmmb-point-neuron-framework-model%2Ff51304b9-aead-4dc4-af75-577906b7aea3/outgoing",
+  "_project": "https://bbp.epfl.ch/nexus/v1/projects/bbp/mmb-point-neuron-framework-model",
+  "_rev": 1,
+  "_schemaProject": "https://bbp.epfl.ch/nexus/v1/projects/bbp/mmb-point-neuron-framework-model",
+  "_self": "https://variant-workflow-url",
+  "_updatedAt": "2024-02-19T14:45:13.685305Z",
+  "_updatedBy": "https://bbp.epfl.ch/nexus/v1/realms/bbp/users/zisis"
+}
