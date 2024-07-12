@@ -1,0 +1,76 @@
+{
+  "@context": [
+    "https://bluebrain.github.io/nexus/contexts/metadata.json",
+    "https://bbp.neuroshapes.org"
+  ],
+  "@id": "https://bbp.epfl.ch/data/bbp/mmb-point-neuron-framework-model/cf42d9c0-4ade-49d7-ab18-925ac6226b1d",
+  "@type": [
+    "ModelBuildingConfig",
+    "Entity"
+  ],
+  "configs": {
+    "cellCompositionConfig": {
+      "@id": "https://bbp.epfl.ch/data/bbp/mmb-point-neuron-framework-model/28a83561-7fb1-4bf2-9348-15936523c95e",
+      "@type": [
+        "CellCompositionConfig",
+        "Entity"
+      ]
+    },
+    "cellPositionConfig": {
+      "@id": "https://bbp.epfl.ch/data/bbp/mmb-point-neuron-framework-model/13b2b7b5-9a25-4780-8eab-af6087a3e591",
+      "@type": [
+        "CellPositionConfig",
+        "Entity"
+      ]
+    },
+    "eModelAssignmentConfig": {
+      "@id": "https://bbp.epfl.ch/data/bbp/mmb-point-neuron-framework-model/a0f07561-e6ba-4d37-8008-fe85c8f2fac2",
+      "@type": [
+        "EModelAssignmentConfig",
+        "Entity"
+      ]
+    },
+    "macroConnectomeConfig": {
+      "@id": "https://bbp.epfl.ch/data/bbp/mmb-point-neuron-framework-model/d26d5d0a-cd9f-4b8f-8e12-6e7a35a98a4f",
+      "@type": [
+        "MacroConnectomeConfig",
+        "Entity"
+      ]
+    },
+    "microConnectomeConfig": {
+      "@id": "https://bbp.epfl.ch/data/bbp/mmb-point-neuron-framework-model/fae34b1e-7f6b-4376-a212-2ec16d78887a",
+      "@type": [
+        "MicroConnectomeConfig",
+        "Entity"
+      ]
+    },
+    "morphologyAssignmentConfig": {
+      "@id": "https://bbp.epfl.ch/data/bbp/mmb-point-neuron-framework-model/c69109de-8bde-4407-ae40-95befe4de661",
+      "@type": [
+        "MorphologyAssignmentConfig",
+        "Entity"
+      ]
+    },
+    "synapseConfig": {
+      "@id": "https://bbp.epfl.ch/data/bbp/mmb-point-neuron-framework-model/50687e63-7d73-4aca-9eea-84afc368fd43",
+      "@type": [
+        "SynapseConfig",
+        "Entity"
+      ]
+    }
+  },
+  "description": "Skipping synapseConfig, microConnectome, modelAssignment",
+  "name": "Release 23.04 - new clone",
+  "_constrainedBy": "https://bluebrain.github.io/nexus/schemas/unconstrained.json",
+  "_createdAt": "2023-09-04T10:13:42.958Z",
+  "_createdBy": "https://bbp.epfl.ch/nexus/v1/realms/bbp/users/antonel",
+  "_deprecated": false,
+  "_incoming": "https://bbp.epfl.ch/nexus/v1/resources/bbp/mmb-point-neuron-framework-model/_/https:%2F%2Fbbp.epfl.ch%2Fdata%2Fbbp%2Fmmb-point-neuron-framework-model%2Fcf42d9c0-4ade-49d7-ab18-925ac6226b1d/incoming",
+  "_outgoing": "https://bbp.epfl.ch/nexus/v1/resources/bbp/mmb-point-neuron-framework-model/_/https:%2F%2Fbbp.epfl.ch%2Fdata%2Fbbp%2Fmmb-point-neuron-framework-model%2Fcf42d9c0-4ade-49d7-ab18-925ac6226b1d/outgoing",
+  "_project": "https://bbp.epfl.ch/nexus/v1/projects/bbp/mmb-point-neuron-framework-model",
+  "_rev": 1,
+  "_schemaProject": "https://bbp.epfl.ch/nexus/v1/projects/bbp/mmb-point-neuron-framework-model",
+  "_self": "https://bbp.epfl.ch/nexus/v1/resources/bbp/mmb-point-neuron-framework-model/_/https:%2F%2Fbbp.epfl.ch%2Fdata%2Fbbp%2Fmmb-point-neuron-framework-model%2Fcf42d9c0-4ade-49d7-ab18-925ac6226b1d",
+  "_updatedAt": "2023-09-04T10:13:42.958Z",
+  "_updatedBy": "https://bbp.epfl.ch/nexus/v1/realms/bbp/users/antonel"
+}

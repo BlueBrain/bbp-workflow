@@ -1,0 +1,40 @@
+{
+  "@context": [
+    "https://bluebrain.github.io/nexus/contexts/metadata.json",
+    "https://bbp.neuroshapes.org"
+  ],
+  "@id": "https://bbp.epfl.ch/data/bbp/mmb-point-neuron-framework-model/13b2b7b5-9a25-4780-8eab-af6087a3e591",
+  "@type": [
+    "CellPositionConfig",
+    "Entity"
+  ],
+  "description": "NA",
+  "distribution": {
+    "@type": "DataDownload",
+    "contentSize": {
+      "unitCode": "bytes",
+      "value": 282
+    },
+    "contentUrl": "https://bbp.epfl.ch/nexus/v1/files/bbp/mmb-point-neuron-framework-model/https%3A%2F%2Fbbp.epfl.ch%2Fdata%2Fbbp%2Fmmb-point-neuron-framework-model%2F7cbd7645-05aa-45b6-96ed-b9b2a2643a5f?rev=1",
+    "digest": {
+      "algorithm": "SHA-256",
+      "value": "b41ac797e21613b9c1771ba30dac781097892de9edee86f27b0e29ff1fee648a"
+    },
+    "encodingFormat": "application/json",
+    "name": "cell-position-config.json"
+  },
+  "generatorName": "cell_position",
+  "name": "Generator configuration",
+  "_constrainedBy": "https://bluebrain.github.io/nexus/schemas/unconstrained.json",
+  "_createdAt": "2023-09-04T10:13:21.718Z",
+  "_createdBy": "https://bbp.epfl.ch/nexus/v1/realms/bbp/users/antonel",
+  "_deprecated": false,
+  "_incoming": "https://bbp.epfl.ch/nexus/v1/resources/bbp/mmb-point-neuron-framework-model/_/https:%2F%2Fbbp.epfl.ch%2Fdata%2Fbbp%2Fmmb-point-neuron-framework-model%2F13b2b7b5-9a25-4780-8eab-af6087a3e591/incoming",
+  "_outgoing": "https://bbp.epfl.ch/nexus/v1/resources/bbp/mmb-point-neuron-framework-model/_/https:%2F%2Fbbp.epfl.ch%2Fdata%2Fbbp%2Fmmb-point-neuron-framework-model%2F13b2b7b5-9a25-4780-8eab-af6087a3e591/outgoing",
+  "_project": "https://bbp.epfl.ch/nexus/v1/projects/bbp/mmb-point-neuron-framework-model",
+  "_rev": 1,
+  "_schemaProject": "https://bbp.epfl.ch/nexus/v1/projects/bbp/mmb-point-neuron-framework-model",
+  "_self": "https://bbp.epfl.ch/nexus/v1/resources/bbp/mmb-point-neuron-framework-model/_/https:%2F%2Fbbp.epfl.ch%2Fdata%2Fbbp%2Fmmb-point-neuron-framework-model%2F13b2b7b5-9a25-4780-8eab-af6087a3e591",
+  "_updatedAt": "2023-09-04T10:13:21.718Z",
+  "_updatedBy": "https://bbp.epfl.ch/nexus/v1/realms/bbp/users/antonel"
+}

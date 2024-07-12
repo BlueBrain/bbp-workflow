@@ -1,0 +1,79 @@
+[build-system]
+requires = [
+    "setuptools>=64",
+    "setuptools_scm>=8"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bbp-workflow"
+description = "Automated pipelines of batch jobs using python and the luigi framework"
+readme = { file = "README.rst", content-type = "text/x-rst" }
+requires-python = ">=3.11"
+license = { text = "Apache-2.0" }
+authors = [
+  { name = "Blue Brain Project, EPFL" },
+]
+keywords = [
+  "computational neuroscience",
+  "BlueBrainProject",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Operating System :: POSIX",
+  "Topic :: Scientific/Engineering",
+  "Topic :: Utilities",
+]
+dependencies = [
+  "luigi",
+  "jsonschema",
+  "luigi-tools",
+  "sh<2",
+  "matplotlib",
+  "bluepysnap",
+  "voxcell",
+  "entity-management",
+  "xarray",
+  "pint-xarray",
+  "cheetah3",
+  "elephant",
+  "neo",
+  "pyarrow",
+  "blue-cwl",
+  "brayns",
+  "pandas",
+  "bluepyemodel",
+  "libsonata",
+]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+docs = [
+  "sphinx-bluebrain-theme",
+]
+
+[project.urls]
+Homepage = "https://github.com/BlueBrain/bbp-workflow"
+Documentation = "https://bbp-workflow.readthedocs.io/en/stable/"
+Repository = "https://github.com/BlueBrain/bbp-workflow"
+Issues = "https://github.com/BlueBrain/bbp-workflow/issues"
+
+[tool.setuptools.packages.find]
+include = ["bbp_workflow"]
+namespaces = false
+
+[tool.setuptools_scm]
+local_scheme = "no-local-version"
+
+[tool.black]
+line-length = 100
+target-version = [
+    'py311',
+    'py312',
+]
+include = 'bbp_workflow\/.*\.py$|tests\/.*\.py$|doc\/source\/conf\.py$|setup\.py$'
+
+[tool.isort]
+profile = "black"
+line_length = 100

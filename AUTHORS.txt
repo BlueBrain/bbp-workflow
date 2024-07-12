@@ -1,0 +1,16 @@
+Maintainer
+----------
+* BBP/NSE
+
+Authors
+-------
+Adrien Christian Fleury
+Eduard Subert
+Eleftherios Zisis
+Genrich Ivaska
+Gianluca Ficarelli
+Ilkan Fabrice Kiliç
+Jaquier Aurélien Tristan
+Joni Herttuainen
+Marek Naskret
+Mike Gevaert

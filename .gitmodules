@@ -1,0 +1,3 @@
+[submodule "libsonata"]
+	path = libsonata
+	url = https://github.com/BlueBrain/libsonata.git
