@@ -1,7 +1,7 @@
 Changelog
 =========
 
-Version 4.0.0 (2024-08-XX)
+Version 4.0.0 (2024-07-24)
 --------------------------
 
 Improvements
