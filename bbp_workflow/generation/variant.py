@@ -296,7 +296,7 @@ class CommandLineToolTask(luigi.Task):
 
     def __repr__(self):
         """
-        Build a task representation like `MyTask(param1=1.5, param2='5')`
+        Build a task representation like `MyTask(param1=1.5, param2='5')`.
 
         Note: CWL definitions are truncated to Tool(label: mylabel, ...)
         """
@@ -312,10 +312,10 @@ class CommandLineToolTask(luigi.Task):
                     repr_parts.append(f'definition={{"label": {param_value.label} ...}}')
                 else:
                     repr_parts.append(
-                        "%s=%s" % (param_name, param_objs[param_name].serialize(param_value))
+                        f"{param_name}={param_objs[param_name].serialize(param_value)}"
                     )
 
-        task_str = "{}({})".format(self.get_task_family(), ", ".join(repr_parts))
+        task_str = f"{self.get_task_family()}({', '.join(repr_parts)})"
 
         return task_str
 
