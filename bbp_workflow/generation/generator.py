@@ -55,7 +55,7 @@ class CellCompositionGenerator(MultiVariantGenerator):
                         get_region_acronym(region_id),
                     )
                 ),
-                extra_inputs={"region": region_id},
+                extra_inputs={"region_id": region_id},
             )
             tasks[region_id] = task
 
@@ -89,7 +89,7 @@ class CellPositionGenerator(MultiVariantGenerator):
                         get_region_acronym(region_id),
                     )
                 ),
-                extra_inputs={"region": region_id},
+                extra_inputs={"region_id": region_id},
             )
             tasks[region_id] = task
 
