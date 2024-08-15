@@ -38,17 +38,6 @@ class GeneratorTaskConfig(BbpWorkflowConfig):
 
 @attributes(
     {
-        "generator_name": AttrOf(str),
-        "variant_name": AttrOf(str),
-        "version": AttrOf(str),
-    }
-)
-class VariantDefinition(Entity):
-    """Variant definition."""
-
-
-@attributes(
-    {
         "distribution": AttrOf(DataDownload),
     }
 )
