@@ -2,7 +2,6 @@
 
 """Entity definitions module."""
 
-from entity_management.core import Entity
 from entity_management.simulation import AttrOf, DataDownload, attributes
 from entity_management.workflow import BbpWorkflowActivity, BbpWorkflowConfig
 
@@ -34,17 +33,6 @@ def get_model_building_subconfig(model_building_config, name):
 )
 class GeneratorTaskConfig(BbpWorkflowConfig):
     """Generator Configuration."""
-
-
-@attributes(
-    {
-        "generator_name": AttrOf(str),
-        "variant_name": AttrOf(str),
-        "version": AttrOf(str),
-    }
-)
-class VariantDefinition(Entity):
-    """Variant definition."""
 
 
 @attributes(

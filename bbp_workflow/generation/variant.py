@@ -294,6 +294,31 @@ class CommandLineToolTask(luigi.Task):
         visibility=ParameterVisibility.HIDDEN,
     )
 
+    def __repr__(self):
+        """
+        Build a task representation like `MyTask(param1=1.5, param2='5')`.
+
+        Note: CWL definitions are truncated to Tool(label: mylabel, ...)
+        """
+        params = self.get_params()
+        param_values = self.get_param_values(params, [], self.param_kwargs)
+
+        # Build up task id
+        repr_parts = []
+        param_objs = dict(params)
+        for param_name, param_value in param_values:
+            if param_objs[param_name].significant:
+                if param_name == "definition":
+                    repr_parts.append(f'definition={{"label": {param_value.label} ...}}')
+                else:
+                    repr_parts.append(
+                        f"{param_name}={param_objs[param_name].serialize(param_value)}"
+                    )
+
+        task_str = f"{self.get_task_family()}({', '.join(repr_parts)})"
+
+        return task_str
+
     @cached_property
     def output_dir(self):
         """Process output directory."""
@@ -364,6 +389,12 @@ class WorkflowStepTask(CommandLineToolTask):
         description="CWL Workflow definition.",
         visibility=ParameterVisibility.HIDDEN,
     )
+
+    def _generate_log_path(self):
+        """Generate a timestamped log path."""
+        log_dir = create_dir(Path(self.output_dir, "logs"))
+        timestamp = datetime.now().strftime("%Y%m%dT%H%M%S")
+        return log_dir / f"{self.name}__{timestamp}.log"
 
     def requires(self):
         """Get the requirements of the current task from the cwl definition."""

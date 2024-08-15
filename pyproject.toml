@@ -40,7 +40,7 @@ dependencies = [
   "elephant",
   "neo",
   "pyarrow",
-  "blue-cwl",
+  "blue-cwl>=1.0.0",
   "brayns",
   "pandas",
   "bluepyemodel",

@@ -110,8 +110,8 @@ class MockTool:
             "_self": VARIANT_TOOL_URL,
             "@type": "Variant",
             "name": "foo|bar|v1",
-            "generator_name": "foo",
-            "variant_name": "bar",
+            "generatorName": "foo",
+            "variantName": "bar",
             "version": "v1",
         },
         distr_dict={
@@ -160,8 +160,8 @@ class MockWorkflow:
             "_self": VARIANT_WORKFLOW_URL,
             "@type": "Variant",
             "name": "foo|bar|v1",
-            "generator_name": "foo",
-            "variant_name": "bar",
+            "generatorName": "foo",
+            "variantName": "bar",
             "version": "v1",
         },
         distr_dict={

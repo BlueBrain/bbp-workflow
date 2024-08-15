@@ -16,16 +16,16 @@ asttokens==2.4.1
     #   stack-data
 async-property==0.2.2
     # via python-keycloak
-attrs==23.2.0
+attrs==24.2.0
     # via
     #   entity-management
     #   jsonschema
     #   referencing
-blue-cwl==0.1.0
+blue-cwl==1.0.0
     # via bbp-workflow (setup.py)
-bluepyefe==2.3.27
+bluepyefe==2.3.34
     # via bluepyemodel
-bluepyemodel==1.0.10
+bluepyemodel==1.0.15
     # via bbp-workflow (setup.py)
 bluepyopt==1.14.13
     # via bluepyemodel
@@ -35,7 +35,7 @@ bluepysnap==3.0.1
     #   brainbuilder
 brainbuilder==0.20.1
     # via blue-cwl
-brayns==3.8.2
+brayns==3.8.3
     # via bbp-workflow (setup.py)
 cached-property==1.5.2
     # via
@@ -46,7 +46,7 @@ certifi==2024.7.4
     #   httpcore
     #   httpx
     #   requests
-cffi==1.16.0
+cffi==1.17.0
     # via cryptography
 charset-normalizer==3.3.2
     # via requests
@@ -67,15 +67,15 @@ configparser==7.0.0
     # via bluepyemodel
 contourpy==1.2.1
     # via matplotlib
-cryptography==42.0.8
+cryptography==43.0.0
     # via jwcrypto
-currentscape==1.0.13
+currentscape==1.0.15
     # via bluepyemodel
 cycler==0.12.1
     # via matplotlib
 deap==1.4.1
     # via bluepyopt
-debugpy==1.8.2
+debugpy==1.8.5
     # via ipykernel
 decorator==5.1.1
     # via
@@ -89,7 +89,7 @@ devtools[pygments]==0.12.2
     # via entity-management
 docutils==0.21.2
     # via python-daemon
-efel==5.7.2
+efel==5.7.6
     # via
     #   bluepyefe
     #   bluepyemodel
@@ -132,7 +132,7 @@ h5py==3.11.0
     #   hdmf
     #   pynwb
     #   voxcell
-hdmf==3.14.2
+hdmf==3.14.3
     # via pynwb
 httpcore==1.0.5
     # via httpx
@@ -145,7 +145,7 @@ idna==3.7
     #   requests
 igor2==0.5.8
     # via bluepyefe
-importlib-resources==6.4.0
+importlib-resources==6.4.2
     # via bluepysnap
 ipykernel==6.29.5
     # via ipyparallel
@@ -192,7 +192,7 @@ jwcrypto==1.5.6
     # via python-keycloak
 kiwisolver==1.4.5
     # via matplotlib
-libsonata==0.1.27
+libsonata==0.1.28
     # via
     #   bbp-workflow (setup.py)
     #   blue-cwl
@@ -208,13 +208,13 @@ luigi==3.5.1
     #   luigi-tools
 luigi-tools==0.3.4
     # via bbp-workflow (setup.py)
-lxml==5.2.2
+lxml==5.3.0
     # via
     #   brainbuilder
     #   fz-td-recipe
 markupsafe==2.1.5
     # via jinja2
-matplotlib==3.9.1
+matplotlib==3.9.2
     # via
     #   bbp-workflow (setup.py)
     #   bluepyefe
@@ -224,7 +224,7 @@ matplotlib-inline==0.1.7
     # via
     #   ipykernel
     #   ipython
-more-itertools==10.3.0
+more-itertools==10.4.0
     # via
     #   bluepysnap
     #   morph-tool
@@ -240,7 +240,7 @@ morphio==3.3.9
     #   brainbuilder
     #   morph-tool
     #   neurom
-neo==0.13.1
+neo==0.13.2
     # via
     #   bbp-workflow (setup.py)
     #   bluepyefe
@@ -252,7 +252,7 @@ neurom==4.0.2
     # via
     #   bluepyemodel
     #   morph-tool
-neuron==8.2.4
+neuron==8.2.6
     # via
     #   bluepyemodel
     #   bluepyopt
@@ -341,9 +341,9 @@ psutil==6.0.0
     #   ipyparallel
 ptyprocess==0.7.0
     # via pexpect
-pure-eval==0.2.2
+pure-eval==0.2.3
     # via stack-data
-pyarrow==16.1.0
+pyarrow==17.0.0
     # via
     #   bbp-workflow (setup.py)
     #   blue-cwl
@@ -358,7 +358,7 @@ pygments==2.18.0
     # via
     #   devtools
     #   ipython
-pyjwt==2.8.0
+pyjwt==2.9.0
     # via entity-management
 pynrrd==1.0.0
     # via voxcell
@@ -379,17 +379,17 @@ python-dateutil==2.9.0.post0
     #   matplotlib
     #   pandas
     #   pynwb
-python-keycloak==4.2.1
+python-keycloak==4.3.0
     # via entity-management
 pytz==2024.1
     # via pandas
-pyyaml==6.0.1
+pyyaml==6.0.2
     # via
     #   bluepyemodel
     #   brainbuilder
     #   fz-td-recipe
     #   neurom
-pyzmq==26.0.3
+pyzmq==26.1.0
     # via
     #   ipykernel
     #   ipyparallel
@@ -414,7 +414,7 @@ requests==2.32.3
     #   voxcell
 requests-toolbelt==1.0.0
     # via python-keycloak
-rpds-py==0.19.0
+rpds-py==0.20.0
     # via
     #   jsonschema
     #   referencing
@@ -459,7 +459,7 @@ tornado==6.4.1
     #   ipyparallel
     #   jupyter-client
     #   luigi
-tqdm==4.66.4
+tqdm==4.66.5
     # via
     #   bluepyemodel
     #   brainbuilder
@@ -500,7 +500,7 @@ wcwidth==0.2.13
     # via prompt-toolkit
 websockets==12.0
     # via brayns
-xarray==2024.6.0
+xarray==2024.7.0
     # via
     #   bbp-workflow (setup.py)
     #   pint-xarray

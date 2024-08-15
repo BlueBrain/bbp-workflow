@@ -124,7 +124,7 @@ class GeneratorTask(KgTask):
             return {}
 
         return {
-            input_name: generator_instance.output_resource.get_id()
+            f"{input_name}_id": generator_instance.output_resource.get_id()
             for input_name, generator_instance in requirements.items()
         }
 
@@ -143,7 +143,7 @@ class GeneratorTask(KgTask):
 
         Note: The variant definition id is added by default to all variants.
         """
-        inputs = {"variant": variant_id}
+        inputs = {"variant_id": variant_id}
 
         # keep only the name and id of the inputs in the data
         if "inputs" in data:
@@ -166,7 +166,7 @@ class GeneratorTask(KgTask):
                 filename="variant_task_parameterization.json",
                 content_type="application/json",
             )
-            inputs["configuration"] = configuration.get_id()
+            inputs["configuration_id"] = configuration.get_id()
 
         return inputs
 
