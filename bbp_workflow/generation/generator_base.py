@@ -188,7 +188,9 @@ class GeneratorTask(KgTask):
         # create or find config that parametrizes the variant definition
         config = create_or_find(
             entity_cls=VariantTaskConfig,
-            properties={},
+            properties={
+                "generatorName": self.generator_name,
+            },
             serialized_content=json.dumps({"inputs": input_values}),
             filename="variant_task_configuration.json",
             content_type="application/json",

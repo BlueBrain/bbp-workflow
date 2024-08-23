@@ -38,6 +38,7 @@ class GeneratorTaskConfig(BbpWorkflowConfig):
 @attributes(
     {
         "distribution": AttrOf(DataDownload),
+        "generatorName": AttrOf(str, default=None),
     }
 )
 class VariantTaskConfig(BbpWorkflowConfig):
