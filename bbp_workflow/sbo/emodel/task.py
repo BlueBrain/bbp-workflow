@@ -13,9 +13,9 @@ from bluepyemodel.emodel_pipeline.emodel_pipeline import EModel_pipeline
 from bluepyemodel.emodel_pipeline.emodel_settings import EModelPipelineSettings
 from bluepyemodel.model.model_configurator import ModelConfigurator
 from entity_management.core import Entity
+from entity_management.workflow import BbpWorkflowActivity
 from luigi import Parameter
 
-from bbp_workflow.sbo.entity import BbpWorkflowActivity
 from bbp_workflow.sbo.task import BaseTask, MetaTask
 
 L = logging.getLogger(__name__)

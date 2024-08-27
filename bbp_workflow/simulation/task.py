@@ -415,7 +415,9 @@ class GenerateSimulationCampaign(KgTask):
         if self.post_processors:
             sim_indices = _indices_to_ranges(_campaign_sim_indices(config))
             path_prefix_name = Path(config.attrs["path_prefix"]) / config.name
-            cmd = f'python "$POST_PROCESSOR" {path_prefix_name/"config.json"} $SLURM_ARRAY_TASK_ID'
+            cmd = (
+                f'python "$POST_PROCESSOR" {path_prefix_name / "config.json"} $SLURM_ARRAY_TASK_ID'
+            )
             pre_cmd = dedent(
                 f"""\
                 cd {path_prefix_name}/$SLURM_ARRAY_TASK_ID

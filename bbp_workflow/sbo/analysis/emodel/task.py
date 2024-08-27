@@ -7,6 +7,7 @@ import textwrap
 from pathlib import Path
 
 from blue_cwl.me_model.staging import stage_emodel
+from entity_management.analysis import AnalysisReport, MultiEModelAnalysis
 from entity_management.base import Derivation
 from entity_management.emodel import EModel
 from luigi import DictParameter, ListParameter, Parameter, PathParameter
@@ -18,7 +19,6 @@ from bbp_workflow.sbo.analysis.common.task import (
     MultiAnalyseGenericMeta,
     get_analysis_config_schema,
 )
-from bbp_workflow.sbo.entity import AnalysisReport, MultiEModelAnalysis
 from bbp_workflow.sbo.task import BaseTask
 from bbp_workflow.settings import DEFAULT_HOST
 from bbp_workflow.task import KgCfg

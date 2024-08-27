@@ -6,6 +6,8 @@ from enum import Enum
 from pathlib import Path
 
 import brayns
+from entity_management.analysis import AnalysisReport
+from entity_management.base import Derivation
 from entity_management.simulation import Simulation as SimEntity
 from entity_management.simulation import SimulationCampaignAnalysis
 from luigi import (
@@ -23,7 +25,6 @@ from luigi import (
 
 from bbp_workflow.luigi import RemoteTarget, inherits
 from bbp_workflow.sbo.analysis.sim.task import MultiAnalyseSimCampaignMeta
-from bbp_workflow.sbo.entity import AnalysisReport, Derivation
 from bbp_workflow.sbo.sim.task import ReportsSimCampaignMeta, RunSimCampaign, RunSimCampaignMeta
 from bbp_workflow.sbo.task import BaseTask, MetaTask
 from bbp_workflow.settings import BBP_WORKFLOW_SIF, BRAYNS_SIF, DEFAULT_HOST, ENVIRONMENT
