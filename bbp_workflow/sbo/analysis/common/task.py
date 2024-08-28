@@ -10,8 +10,14 @@ from configparser import ConfigParser
 from functools import cached_property
 from pathlib import Path
 
+from entity_management.analysis import (
+    AnalysisReportGeneration,
+    AnalysisReportGenerationActivity,
+    AnalysisSoftwareSourceCode,
+    CumulativeAnalysisReport,
+    MultiCumulativeAnalysisReport,
+)
 from entity_management.base import Derivation
-from entity_management.core import Contribution
 from luigi import (
     BoolParameter,
     Config,
@@ -28,11 +34,6 @@ from luigi import (
 from luigi.parameter import ParameterVisibility
 
 from bbp_workflow.luigi import CompleteTask, RemoteTarget, inherits
-from bbp_workflow.sbo.entity import (
-    AnalysisSoftwareSourceCode,
-    CumulativeAnalysisReport,
-    MultiCumulativeAnalysisReport,
-)
 from bbp_workflow.sbo.task import BaseTask, MetaTask
 from bbp_workflow.settings import DEFAULT_HOST, L
 from bbp_workflow.slurm import _run_cmd, _run_sbatch, _sbatch
@@ -534,13 +535,14 @@ class MultiAnalyseGenericMeta(MetaTask, metaclass=abc.ABCMeta):
             assert isinstance(task, AnalyseGeneric)
             if task.source_code_url:
                 agent = AnalysisSoftwareSourceCode.from_url(task.source_code_url)
-                contributions = [Contribution(agent=agent)]
+                generation_activity = AnalysisReportGenerationActivity(wasAssociatedWith=agent)
+                generations = [AnalysisReportGeneration(activity=generation_activity)]
             else:
                 L.warning(
                     "The source code url for analysis %s is missing, the relation won't be created",
                     index,
                 )
-                contributions = None
+                generations = None
             sub_resource = CumulativeAnalysisReport(
                 name=task.report_name,
                 description=task.report_description,
@@ -548,7 +550,7 @@ class MultiAnalyseGenericMeta(MetaTask, metaclass=abc.ABCMeta):
                 types=list(task.types),
                 derivation=Derivation(entity=analysed_entity),
                 index=index,
-                contribution=contributions,
+                generation=generations,
             )
             sub_resource = self.publish(sub_resource, activity=activity)
             parts.append(sub_resource)

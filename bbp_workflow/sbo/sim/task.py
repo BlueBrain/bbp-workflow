@@ -8,6 +8,8 @@ from pathlib import Path
 from threading import Thread
 
 import numpy as np
+from entity_management.analysis import AnalysisReport
+from entity_management.base import Derivation
 from entity_management.simulation import Simulation as SimEntity
 from entity_management.simulation import (
     SimulationCampaign,
@@ -32,7 +34,6 @@ from luigi import (
 
 from bbp_workflow.luigi import RemoteTarget, inherits
 from bbp_workflow.sbo.circ.task import FindDetailedCircuit, FindDetailedCircuitMeta
-from bbp_workflow.sbo.entity import AnalysisReport, Derivation
 from bbp_workflow.sbo.task import BaseTask, MetaTask
 from bbp_workflow.settings import (
     BBP_WORKFLOW_SIF,

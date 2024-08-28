@@ -6,6 +6,11 @@ import json
 from functools import cached_property
 from pathlib import Path
 
+from entity_management.analysis import (
+    AnalysisReport,
+    Derivation,
+    MultiCumulativeSimulationCampaignAnalysis,
+)
 from entity_management.simulation import Simulation
 from luigi import DictParameter, ListParameter, Parameter
 
@@ -14,11 +19,6 @@ from bbp_workflow.sbo.analysis.common.task import (
     MultiAnalyseGeneric,
     MultiAnalyseGenericMeta,
     get_analysis_config_schema,
-)
-from bbp_workflow.sbo.entity import (
-    AnalysisReport,
-    Derivation,
-    MultiCumulativeSimulationCampaignAnalysis,
 )
 from bbp_workflow.sbo.sim.task import RunSimCampaign, RunSimCampaignMeta
 from bbp_workflow.settings import L
