@@ -7,4 +7,5 @@ build/
 dist/
 doc/build
 doc/source/generated
+venv/
 .tox

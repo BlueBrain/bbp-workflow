@@ -27,6 +27,14 @@ Tests
     pip install tox
     tox
 
+Local Run
+=========
+
+.. code-block:: bash
+
+    make install_to_venv
+    ./bbp-workflow-launch.sh --config workflows/foo.cfg foo Bar dynamic-param=world
+
 Acknowledgements
 ================
 
