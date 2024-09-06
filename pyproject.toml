@@ -9,7 +9,7 @@ build-backend = "setuptools.build_meta"
 name = "bbp-workflow"
 description = "Automated pipelines of batch jobs using python and the luigi framework"
 readme = { file = "README.rst", content-type = "text/x-rst" }
-requires-python = ">=3.11"
+requires-python = ">=3.10"
 license = { text = "Apache-2.0" }
 authors = [
   { name = "Blue Brain Project, EPFL" },
@@ -69,6 +69,7 @@ local_scheme = "no-local-version"
 [tool.black]
 line-length = 100
 target-version = [
+    'py310',
     'py311',
     'py312',
 ]
