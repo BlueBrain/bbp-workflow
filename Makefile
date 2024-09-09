@@ -1,4 +1,4 @@
-.PHONY: help python_build docker_build_latest run
+.PHONY: help python_build docker_build_latest run install_to_venv
 
 IMAGE_NAME?=bbp-workflow
 
@@ -23,3 +23,10 @@ docker_build_latest: # python_build
 
 run:
 	docker run -it --rm --user $$(id -u) -e DEBUG=True $(IMAGE_NAME)
+
+venv:
+	if python -m ensurepip --version; then python -m venv $@; else virtualenv $@; fi
+	venv/bin/pip install --upgrade pip
+
+install_to_venv: | venv
+	venv/bin/pip install --upgrade bbp-workflow
