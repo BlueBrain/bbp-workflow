@@ -34,5 +34,6 @@ Overview of the tasks available in the workflow engine:
 
    Home <self>
    api
+   workflow
    dependencies
    changelog

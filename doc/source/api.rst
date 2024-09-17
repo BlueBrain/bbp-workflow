@@ -10,3 +10,4 @@ API Documentation
     bbp_workflow.simulation.util
     bbp_workflow.target
     bbp_workflow.task
+    bbp_workflow.generation.workflow
