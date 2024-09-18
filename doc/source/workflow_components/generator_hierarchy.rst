@@ -1,5 +1,5 @@
-Generator: Hierarchy
-====================
+Generator Graph
+===============
 
 .. _generators:
 

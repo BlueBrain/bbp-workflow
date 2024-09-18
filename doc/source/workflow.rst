@@ -6,4 +6,5 @@ The Building Workflow
    workflow_components/quickstart.rst
    workflow_components/overview.rst
    workflow_components/generator_hierarchy.rst
-   workflow_components/generator_definition_configuration.rst
+   workflow_components/generator_definitions.rst
+   workflow_components/generator_configurations.rst
