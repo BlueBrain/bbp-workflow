@@ -7,4 +7,3 @@ The Building Workflow
    workflow_components/overview.rst
    workflow_components/generator_hierarchy.rst
    workflow_components/generator_definitions.rst
-   workflow_components/generator_configurations.rst

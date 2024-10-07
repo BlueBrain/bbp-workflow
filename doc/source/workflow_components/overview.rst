@@ -6,82 +6,15 @@ Overview
 The Workflow Task
 -----------------
 
-The :class:`Workflow <bbp_workflow.generation.workflow.SBOWorkflow>` task receives a :ref:`ModelBuildingConfig <model_config>` resource id and a target task name.
+The :class:`Workflow <bbp_workflow.generation.workflow.SBOWorkflow>` task receives a `ModelBuildingConfig <https://entity-management.readthedocs.io/en/latest/building_entities.html#modelbuildingconfig>`_ resource id and a target task name.
 
 The target task will trigger the execution of all its required upstream tasks, ensuring that each necessary dependency is processed in sequence until the target task is reached and executed.
 
 For example, if cellPositionConfig is selected as the target task, Luigi will first process the ``CellPositionGenerator`` requirements, which directly depends on ``CellCompositionGenerator``. Therefore ``CellCompositionGenerator`` will be executed before ``CellPositionGenerator`` can run.
 
-
-.. _model_config:
-
-ModelBuildingConfig
--------------------
-
-The ModelBuildingConfig incorporates all the generator configs as follows:
-
-
-.. graphviz::
-
-   digraph foo{
-
-    rankdir = "LR"
-    splines = "ortho"
-
-    ModelBuildingConfig[
-        shape = Mrecord style = filled fillcolor = lemonchiffon
-    ]
-
-    CellCompositionConfig [
-        shape = Mrecord style = filled fillcolor = lemonchiffon
-        width = 3
-    ]
-
-    CellPositionConfig [
-        shape = Mrecord style = filled fillcolor = lemonchiffon
-        width = 3
-    ]
-
-    MorphologyAssignmentConfig [
-        shape = Mrecord style = filled fillcolor = lemonchiffon
-        width = 3
-    ]
-
-    MEModelConfig [
-        shape = Mrecord style = filled fillcolor = lemonchiffon
-        width = 3
-    ]
-
-    MacroConnectomeConfig [
-        shape = Mrecord style = filled fillcolor = lemonchiffon
-        width = 3
-    ]
-
-    MicroConnectomeConfig [
-        shape = Mrecord style = filled fillcolor = lemonchiffon
-        width = 3
-    ]
-
-    SynapseConfig [
-        shape = Mrecord style = filled fillcolor = lemonchiffon
-        width = 3
-    ]
-
-    ModelBuildingConfig -> CellCompositionConfig [label="configs[cellCompositionConfig]", labelheight=2];
-    ModelBuildingConfig -> CellPositionConfig [label="configs[cellPositionConfig]"];
-    ModelBuildingConfig -> MorphologyAssignmentConfig [label="configs[morphologyAssignmentConfig]"];
-    ModelBuildingConfig -> MEModelConfig [label="configs[meModelConfig]"];
-    ModelBuildingConfig -> MacroConnectomeConfig [label="configs[macroConnectomeConfig]"];
-    ModelBuildingConfig -> MicroConnectomeConfig [label="configs[microConnectomeConfig]"];
-    ModelBuildingConfig -> SynapseConfig [label="configs[synapseConfig]"];
-
-
-   }
-
-
 .. note::
 
-   It is not necessary for the config to include all the generator configs, however it must contain all configs up until the target task selected when executing the :ref:`workflow <workflow>`.
+   It is not necessary for the ModelBuildingConfig to include all the generator configs, however it must contain all configs up until the target task selected when executing the :ref:`workflow <workflow>`.
 
 
 .. _generator_layout:
