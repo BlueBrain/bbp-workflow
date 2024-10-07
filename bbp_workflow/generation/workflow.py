@@ -57,7 +57,6 @@ class SBOWorkflow(luigi.WrapperTask):
 
     def requires(self):
         """Return required leaf task in the workflow DAG, determined by the `target` argument."""
-
         generator_class = get_class_from_config_name(self.target)
 
         return generator_class(
