@@ -11,7 +11,18 @@ from bbp_workflow.task import KgCfg, RemoteHostCfg
 
 @luigi.util.inherits(KgCfg, RemoteHostCfg)
 class SBOWorkflow(luigi.WrapperTask):
-    """Workflow class."""
+    """Generator Workflow class for building detailed circuits.
+
+    Args:
+        output_dir (Path): Output directory to write generated data.
+        config_url (str): ModelBuildingConfig NEXUS resource id.
+        account (str): Project account.
+        isolated (bool):
+            Whether the workflow will run in isolated mode. Isolated mode ignores activities from
+            previous executions.
+        target (str): The target generator execute. The workflow will run all tasks up until the
+            target task.
+    """
 
     output_dir = luigi.PathParameter(
         significant=True,
@@ -45,7 +56,7 @@ class SBOWorkflow(luigi.WrapperTask):
         return self.clone(RemoteHostCfg).param_kwargs
 
     def requires(self):
-
+        """Return required leaf task in the workflow DAG, determined by the `target` argument."""
         generator_class = get_class_from_config_name(self.target)
 
         return generator_class(
