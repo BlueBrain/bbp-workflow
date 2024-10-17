@@ -29,7 +29,6 @@ dependencies = [
   "luigi",
   "jsonschema",
   "luigi-tools",
-  "sh<2",
   "matplotlib",
   "bluepysnap",
   "voxcell",
