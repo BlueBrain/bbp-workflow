@@ -28,7 +28,7 @@ AVAILABLE_NODES = 800
 
 HTTPS_PROXY = "http://bbpproxy.epfl.ch:80/"
 
-MODULE_ARCHIVE = "archive/2024-06"
+MODULE_ARCHIVE = "archive/2024-09"
 
 CFG_JSON = "config.json"
 SIM_CFG_JSON = "simulation_config.json"
